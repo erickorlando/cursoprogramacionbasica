@@ -1,4 +1,4 @@
-# Curso de Programación Básica con C# (Sharp)
+# Curso de Programación Básica con C# (C-Sharp)
 
 ## Dictado por Erick Orlando
 
