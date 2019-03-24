@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaPrestamos
@@ -16,7 +13,14 @@ namespace SistemaPrestamos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            var login = new FrmLogin();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new FrmRegistro());
+            }
+
+            //Application.Run(new FrmRegistro());
         }
     }
 }
