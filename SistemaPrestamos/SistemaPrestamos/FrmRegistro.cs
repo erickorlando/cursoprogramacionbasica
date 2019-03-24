@@ -5,7 +5,7 @@ namespace SistemaPrestamos
 {
     public partial class FrmRegistro : Form
     {
-        private List<Cliente> listaClientes = new List<Cliente>();
+        private ListaClientes listaClientes = new ListaClientes();
         private Cliente cliente;
 
         public FrmRegistro()
@@ -29,6 +29,9 @@ namespace SistemaPrestamos
 
             if (cliente == null) return;
 
+            cliente.CalcularValores();
+            //cliente.CalcularSueldo();
+            
             listaClientes.Add(cliente);
 
             clienteBindingSource.DataSource = listaClientes;
