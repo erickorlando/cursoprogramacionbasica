@@ -45,6 +45,7 @@
     <Compile Include="ListaClientes.cs" />
     <Compile Include="ListaProveedor.cs" />
     <Compile Include="Persona.cs" />
+    <Compile Include="ProcesoCuotas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor.cs" />
   </ItemGroup>

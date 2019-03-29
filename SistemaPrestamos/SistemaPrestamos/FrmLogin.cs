@@ -20,6 +20,9 @@ namespace SistemaPrestamos
             if (txtUsuario.Text == txtClave.Text)
             {
                 MessageBox.Show(@"Login exitoso", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Program.UsuarioAutenticado = txtUsuario.Text;
+
                 this.DialogResult = DialogResult.OK;
             }
             else

@@ -5,6 +5,8 @@ namespace SistemaPrestamos
 {
     static class Program
     {
+        public static string UsuarioAutenticado { get; set; }
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -19,10 +21,9 @@ namespace SistemaPrestamos
             var login = new FrmLogin();
             if (login.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new FrmProveedor());
+                Application.Run(new MainForm());
             }
 
-            //Application.Run(new FrmRegistro());
         }
     }
 }
