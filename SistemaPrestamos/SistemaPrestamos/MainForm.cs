@@ -8,6 +8,7 @@ namespace SistemaPrestamos
         public static MainForm Instancia;
 
         public ListaClientes ListaClientes = new ListaClientes();
+        public ListaProveedor ListaProveedores = new ListaProveedor();
 
         public MainForm()
         {

@@ -21,6 +21,8 @@ namespace SistemaPrestamos
 
     public class Cliente : Persona
     {
+        public string Correo { get; set; }
+
         public Cliente()
         {
             FechaNacimiento = DateTime.Today.AddYears(-18);

@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="CuotaCalculada.cs" />
     <Compile Include="ListaClientes.cs" />
+    <Compile Include="ListaCuotas.cs" />
     <Compile Include="ListaProveedor.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="ProcesoCuotas.cs" />

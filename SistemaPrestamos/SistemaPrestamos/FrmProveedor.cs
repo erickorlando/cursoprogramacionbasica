@@ -5,7 +5,6 @@ namespace SistemaPrestamos
     public partial class FrmProveedor : FormularioPlantilla
     {
         private Proveedor proveedor;
-        private ListaProveedor listaProveedor = new ListaProveedor();
 
         public FrmProveedor()
         {
@@ -24,11 +23,29 @@ namespace SistemaPrestamos
             if (proveedor == null) return;
             proveedor.CalcularValores();
 
-            listaProveedor.Add(proveedor);
-            CargarControles(bslistaProveedor, listaProveedor);
+            if (proveedor.EsNuevo)
+                MainForm.Instancia.ListaProveedores.Add(proveedor);
 
-            lblContador.Text = $@"La cantidad de registros es {listaProveedor.Count}";
-            
+            CargarControles(bslistaProveedor, MainForm.Instancia.ListaProveedores);
+
+            lblContador.Text = $@"La cantidad de registros es {MainForm.Instancia.ListaProveedores.Count}";
+
+            btnNuevo.PerformClick();
+        }
+
+        protected override void btnEditar_Click(object sender, EventArgs e)
+        {
+            // Nueva característica de C# 7.0 llamada Pattern Matching.
+
+            if (!(bslistaProveedor.Current is Proveedor seleccionado)) return;
+
+            seleccionado.EsNuevo = false;
+
+            CargarControles(proveedorBindingSource, seleccionado);
+        }
+
+        private void FrmProveedor_Load(object sender, EventArgs e)
+        {
             btnNuevo.PerformClick();
         }
     }

@@ -10,6 +10,13 @@ namespace SistemaPrestamos
         public DateTime FechaNacimiento { get; set; }
         public string Distrito { get; set; }
 
+        public bool EsNuevo { get; set; }
+
+        protected Persona()
+        {
+            EsNuevo = true;
+        }
+
         public void CalcularEdad()
         {
             // Cuando restamos fechas, me devuelve una clase llamada TimeSpan.

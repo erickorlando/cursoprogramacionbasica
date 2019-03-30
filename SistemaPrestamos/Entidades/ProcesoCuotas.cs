@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace SistemaPrestamos
@@ -48,19 +47,5 @@ namespace SistemaPrestamos
             //}
             TotalAPagar = ListaCuotas.Sum(x => x.Total);
         }
-    }
-
-    // Esto representa una sola fila en la grilla de cuotas.
-    public class CuotaCalculada
-    {
-        public decimal MontoCuota { get; set; }
-        public DateTime FechaPago { get; set; }
-        public decimal Interes { get; set; }
-        public decimal Total { get; set; }
-    }
-
-    public class ListaCuotas : List<CuotaCalculada>
-    {
-
     }
 }

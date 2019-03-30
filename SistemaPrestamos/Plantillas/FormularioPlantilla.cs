@@ -35,5 +35,15 @@ namespace SistemaPrestamos
             bindingSource.DataSource = objeto;
             bindingSource.ResetBindings(false);
         }
+
+        protected virtual void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected virtual void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
