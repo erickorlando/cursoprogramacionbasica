@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ErickOrlando.Utilidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=35cc583934d49367, processorArchitecture=MSIL">
+      <HintPath>..\packages\ErickOrlando.Utilidades.1.0.0\lib\ErickOrlando.Utilidades.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +53,9 @@
     <Compile Include="ProcesoCuotas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

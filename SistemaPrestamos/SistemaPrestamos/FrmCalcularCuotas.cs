@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraReports.UI;
 
 namespace SistemaPrestamos
 {
@@ -44,6 +45,18 @@ namespace SistemaPrestamos
             var cliente = listaClientesBindingSource.Current as Cliente;
 
             lblFechaNacimiento.Text = cliente.FechaNacimiento.ToShortDateString();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            var reporte = new ReportePrestamo();
+            reporte.Parameters["Cliente"].Value = _procesoCuotas.Cliente;
+            reporte.Parameters["Monto"].Value = _procesoCuotas.MontoPrestamo;
+            reporte.Parameters["Interes"].Value = _procesoCuotas.Interes;
+            reporte.Parameters["Cuotas"].Value = _procesoCuotas.CantidadCuotas;
+
+            reporte.DataSource = _procesoCuotas.ListaCuotas;
+            reporte.ShowRibbonPreviewDialog();
         }
     }
 }

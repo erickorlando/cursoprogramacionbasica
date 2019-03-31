@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plantillas", "Plantillas\Pl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{0518CEDF-B72E-42E2-BBCF-9E5F173A8707}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorSistemaPrestamos", "InstaladorSistemaPrestamos\InstaladorSistemaPrestamos.vdproj", "{D4682325-DAFC-4E78-9473-FB76D02C298B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{0518CEDF-B72E-42E2-BBCF-9E5F173A8707}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0518CEDF-B72E-42E2-BBCF-9E5F173A8707}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0518CEDF-B72E-42E2-BBCF-9E5F173A8707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4682325-DAFC-4E78-9473-FB76D02C298B}.Debug|Any CPU.ActiveCfg = Debug
+		{D4682325-DAFC-4E78-9473-FB76D02C298B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

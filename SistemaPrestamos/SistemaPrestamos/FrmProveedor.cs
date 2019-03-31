@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace SistemaPrestamos
 {
@@ -44,9 +45,22 @@ namespace SistemaPrestamos
             CargarControles(proveedorBindingSource, seleccionado);
         }
 
+        protected override void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (!(bslistaProveedor.Current is Proveedor seleccionado)) return;
+
+            if (MessageBox.Show("Está seguro que desea eliminar?", "Confirme", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) != DialogResult.Yes) return;
+
+            MainForm.Instancia.ListaProveedores.Remove(seleccionado);
+
+            CargarControles(bslistaProveedor, MainForm.Instancia.ListaProveedores);
+        }
+
         private void FrmProveedor_Load(object sender, EventArgs e)
         {
             btnNuevo.PerformClick();
+            CargarControles(bslistaProveedor, MainForm.Instancia.ListaProveedores);
         }
     }
 }

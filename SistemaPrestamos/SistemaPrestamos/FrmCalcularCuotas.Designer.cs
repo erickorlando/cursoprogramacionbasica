@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label totalAPagarLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.Label interesLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCalcularCuotas));
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.bsProcesoCuotas = new System.Windows.Forms.BindingSource(this.components);
@@ -53,6 +54,7 @@
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.totalAPagarTextBox = new System.Windows.Forms.TextBox();
             this.interesTextBox = new System.Windows.Forms.TextBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             totalAPagarLabel = new System.Windows.Forms.Label();
             interesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bsProcesoCuotas)).BeginInit();
@@ -69,6 +71,15 @@
             totalAPagarLabel.Size = new System.Drawing.Size(98, 17);
             totalAPagarLabel.TabIndex = 9;
             totalAPagarLabel.Text = "Total a Pagar:";
+            // 
+            // interesLabel
+            // 
+            interesLabel.AutoSize = true;
+            interesLabel.Location = new System.Drawing.Point(18, 125);
+            interesLabel.Name = "interesLabel";
+            interesLabel.Size = new System.Drawing.Size(55, 17);
+            interesLabel.TabIndex = 11;
+            interesLabel.Text = "Interes:";
             // 
             // label1
             // 
@@ -162,8 +173,8 @@
             // montoCuotaDataGridViewTextBoxColumn
             // 
             this.montoCuotaDataGridViewTextBoxColumn.DataPropertyName = "MontoCuota";
-            dataGridViewCellStyle5.Format = "C2";
-            this.montoCuotaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "C2";
+            this.montoCuotaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.montoCuotaDataGridViewTextBoxColumn.HeaderText = "MontoCuota";
             this.montoCuotaDataGridViewTextBoxColumn.Name = "montoCuotaDataGridViewTextBoxColumn";
             this.montoCuotaDataGridViewTextBoxColumn.ReadOnly = true;
@@ -171,9 +182,9 @@
             // fechaPagoDataGridViewTextBoxColumn
             // 
             this.fechaPagoDataGridViewTextBoxColumn.DataPropertyName = "FechaPago";
-            dataGridViewCellStyle6.Format = "D";
-            dataGridViewCellStyle6.NullValue = null;
-            this.fechaPagoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "D";
+            dataGridViewCellStyle2.NullValue = null;
+            this.fechaPagoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.fechaPagoDataGridViewTextBoxColumn.HeaderText = "FechaPago";
             this.fechaPagoDataGridViewTextBoxColumn.Name = "fechaPagoDataGridViewTextBoxColumn";
             this.fechaPagoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -181,8 +192,8 @@
             // Interes
             // 
             this.Interes.DataPropertyName = "Interes";
-            dataGridViewCellStyle7.Format = "C2";
-            this.Interes.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Format = "C2";
+            this.Interes.DefaultCellStyle = dataGridViewCellStyle3;
             this.Interes.HeaderText = "Interes";
             this.Interes.Name = "Interes";
             this.Interes.ReadOnly = true;
@@ -190,8 +201,8 @@
             // Total
             // 
             this.Total.DataPropertyName = "Total";
-            dataGridViewCellStyle8.Format = "C2";
-            this.Total.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Format = "C2";
+            this.Total.DefaultCellStyle = dataGridViewCellStyle4;
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
@@ -229,15 +240,6 @@
             this.totalAPagarTextBox.Size = new System.Drawing.Size(249, 23);
             this.totalAPagarTextBox.TabIndex = 6;
             // 
-            // interesLabel
-            // 
-            interesLabel.AutoSize = true;
-            interesLabel.Location = new System.Drawing.Point(18, 125);
-            interesLabel.Name = "interesLabel";
-            interesLabel.Size = new System.Drawing.Size(55, 17);
-            interesLabel.TabIndex = 11;
-            interesLabel.Text = "Interes:";
-            // 
             // interesTextBox
             // 
             this.interesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsProcesoCuotas, "Interes", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
@@ -246,11 +248,22 @@
             this.interesTextBox.Size = new System.Drawing.Size(133, 23);
             this.interesTextBox.TabIndex = 3;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(748, 484);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(152, 30);
+            this.btnImprimir.TabIndex = 12;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // FrmCalcularCuotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 526);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(interesLabel);
             this.Controls.Add(this.interesTextBox);
             this.Controls.Add(totalAPagarLabel);
@@ -265,6 +278,7 @@
             this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCalcularCuotas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -299,5 +313,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.TextBox totalAPagarTextBox;
         private System.Windows.Forms.TextBox interesTextBox;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

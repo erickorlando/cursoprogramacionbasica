@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ErickOrlando.Utilidades.Data;
 
 namespace SistemaPrestamos
 {
@@ -7,11 +8,16 @@ namespace SistemaPrestamos
     {
         public ListaClientes()
         {
+            var generator = new DataGenerator();
+
             for (int i = 0; i < 30; i++)
             {
                 var cliente = new Cliente();
-                cliente.Nombre = $"Cliente N° {i + 1}";
-                cliente.FechaNacimiento = new DateTime(1967 + i, 4, 1 );
+                cliente.Nombre = generator.GetFullName();
+                cliente.FechaNacimiento = generator.GetDate(Convert.ToDateTime("1985-01-01"), DateTime.Today.AddYears(-10));
+                cliente.Distrito = generator.GetStateAbbreviation();
+                cliente.Correo = generator.GetEmail();
+
                 cliente.CalcularValores();
                 this.Add(cliente);
             }

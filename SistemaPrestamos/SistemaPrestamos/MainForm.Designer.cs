@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +83,7 @@
             // calcularCuotasToolStripMenuItem
             // 
             this.calcularCuotasToolStripMenuItem.Name = "calcularCuotasToolStripMenuItem";
-            this.calcularCuotasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calcularCuotasToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.calcularCuotasToolStripMenuItem.Text = "Calcular Cuotas";
             this.calcularCuotasToolStripMenuItem.Click += new System.EventHandler(this.calcularCuotasToolStripMenuItem_Click);
             // 
@@ -92,6 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
