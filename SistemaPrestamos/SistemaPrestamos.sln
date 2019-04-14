@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPrestamos", "SistemaPrestamos\SistemaPrestamos.csproj", "{CD1CC50D-485C-4799-A327-8931820A35E9}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{0518CEDF-B72E-42E2-BBCF-9E5F173A8707}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorSistemaPrestamos", "InstaladorSistemaPrestamos\InstaladorSistemaPrestamos.vdproj", "{D4682325-DAFC-4E78-9473-FB76D02C298B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{94477A93-5B6E-40C7-AFF6-A5E27DA2957F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{0518CEDF-B72E-42E2-BBCF-9E5F173A8707}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4682325-DAFC-4E78-9473-FB76D02C298B}.Debug|Any CPU.ActiveCfg = Debug
 		{D4682325-DAFC-4E78-9473-FB76D02C298B}.Release|Any CPU.ActiveCfg = Release
+		{94477A93-5B6E-40C7-AFF6-A5E27DA2957F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94477A93-5B6E-40C7-AFF6-A5E27DA2957F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94477A93-5B6E-40C7-AFF6-A5E27DA2957F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94477A93-5B6E-40C7-AFF6-A5E27DA2957F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -44,7 +44,13 @@ namespace SistemaPrestamos
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            this.Text = $@"Sistema de Préstamos - Bienvenido: {Program.UsuarioAutenticado}";
+            string adicional = string.Empty;
+            // Con esto comprobamos que la aplicación fue distribuida con ClickOnce
+            if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
+            {
+                adicional = $"Versión: {System.Deployment.Application.ApplicationDeployment.CurrentDeployment.UpdatedVersion}";
+            }
+            this.Text = $@"Sistema de Préstamos - Bienvenido: {Program.UsuarioAutenticado} {adicional}";
         }
     }
 }

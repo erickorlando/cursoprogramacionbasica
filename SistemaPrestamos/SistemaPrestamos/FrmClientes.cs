@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Windows.Forms;
 
 namespace SistemaPrestamos
@@ -71,6 +72,27 @@ namespace SistemaPrestamos
         {
             clienteBindingSource.DataSource = MainForm.Instancia.ListaClientes;
             clienteBindingSource.ResetBindings(false);
+        }
+
+        private void BtnGrabarTodo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var ctx = new Contexto())
+                {
+                    foreach (var cliente in MainForm.Instancia.ListaClientes)
+                    {
+                        ctx.Set<Cliente>().Add(cliente);
+                    }
+                    ctx.SaveChanges();
+                }
+
+                MessageBox.Show("Se terminó de grabar todo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Base de Datos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
     }
 }

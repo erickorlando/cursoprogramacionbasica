@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label fechaNacimientoLabel;
             System.Windows.Forms.Label esInternacionalLabel;
             System.Windows.Forms.Label distritoLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.proveedorBindingSource = new System.Windows.Forms.BindingSource();
+            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaNacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.esInternacionalCheckBox = new System.Windows.Forms.CheckBox();
             this.listaProveedorDataGridView = new System.Windows.Forms.DataGridView();
@@ -43,8 +45,9 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.bslistaProveedor = new System.Windows.Forms.BindingSource();
+            this.bslistaProveedor = new System.Windows.Forms.BindingSource(this.components);
             this.distritoTextBox = new System.Windows.Forms.TextBox();
+            this.btnGrabarTodo = new System.Windows.Forms.Button();
             nombreLabel = new System.Windows.Forms.Label();
             fechaNacimientoLabel = new System.Windows.Forms.Label();
             esInternacionalLabel = new System.Windows.Forms.Label();
@@ -103,6 +106,15 @@
             esInternacionalLabel.Size = new System.Drawing.Size(120, 16);
             esInternacionalLabel.TabIndex = 4;
             esInternacionalLabel.Text = "Es Internacional:";
+            // 
+            // distritoLabel
+            // 
+            distritoLabel.AutoSize = true;
+            distritoLabel.Location = new System.Drawing.Point(9, 116);
+            distritoLabel.Name = "distritoLabel";
+            distritoLabel.Size = new System.Drawing.Size(61, 16);
+            distritoLabel.TabIndex = 12;
+            distritoLabel.Text = "Distrito:";
             // 
             // nombreTextBox
             // 
@@ -173,6 +185,8 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "SalarioBruto";
+            dataGridViewCellStyle2.Format = "C2";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn3.HeaderText = "SalarioBruto";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -206,15 +220,6 @@
             // 
             this.bslistaProveedor.DataSource = typeof(SistemaPrestamos.ListaProveedor);
             // 
-            // distritoLabel
-            // 
-            distritoLabel.AutoSize = true;
-            distritoLabel.Location = new System.Drawing.Point(9, 116);
-            distritoLabel.Name = "distritoLabel";
-            distritoLabel.Size = new System.Drawing.Size(61, 16);
-            distritoLabel.TabIndex = 12;
-            distritoLabel.Text = "Distrito:";
-            // 
             // distritoTextBox
             // 
             this.distritoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proveedorBindingSource, "Distrito", true));
@@ -223,11 +228,22 @@
             this.distritoTextBox.Size = new System.Drawing.Size(268, 23);
             this.distritoTextBox.TabIndex = 3;
             // 
+            // btnGrabarTodo
+            // 
+            this.btnGrabarTodo.Location = new System.Drawing.Point(441, 112);
+            this.btnGrabarTodo.Name = "btnGrabarTodo";
+            this.btnGrabarTodo.Size = new System.Drawing.Size(121, 23);
+            this.btnGrabarTodo.TabIndex = 13;
+            this.btnGrabarTodo.Text = "Grabar Todo";
+            this.btnGrabarTodo.UseVisualStyleBackColor = true;
+            this.btnGrabarTodo.Click += new System.EventHandler(this.BtnGrabarTodo_Click);
+            // 
             // FrmProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 553);
+            this.Controls.Add(this.btnGrabarTodo);
             this.Controls.Add(distritoLabel);
             this.Controls.Add(this.distritoTextBox);
             this.Controls.Add(this.listaProveedorDataGridView);
@@ -254,6 +270,7 @@
             this.Controls.SetChildIndex(this.listaProveedorDataGridView, 0);
             this.Controls.SetChildIndex(this.distritoTextBox, 0);
             this.Controls.SetChildIndex(distritoLabel, 0);
+            this.Controls.SetChildIndex(this.btnGrabarTodo, 0);
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProveedorDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bslistaProveedor)).EndInit();
@@ -269,13 +286,14 @@
         private System.Windows.Forms.DateTimePicker fechaNacimientoDateTimePicker;
         private System.Windows.Forms.CheckBox esInternacionalCheckBox;
         private System.Windows.Forms.DataGridView listaProveedorDataGridView;
+        private System.Windows.Forms.BindingSource bslistaProveedor;
+        private System.Windows.Forms.TextBox distritoTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.BindingSource bslistaProveedor;
-        private System.Windows.Forms.TextBox distritoTextBox;
+        private System.Windows.Forms.Button btnGrabarTodo;
     }
 }

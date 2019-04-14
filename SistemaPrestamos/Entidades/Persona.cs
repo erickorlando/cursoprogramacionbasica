@@ -4,6 +4,7 @@ namespace SistemaPrestamos
 {
     public class Persona
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public decimal SalarioBruto { get; set; }
@@ -12,10 +13,7 @@ namespace SistemaPrestamos
 
         public bool EsNuevo { get; set; }
 
-        protected Persona()
-        {
-            EsNuevo = true;
-        }
+        protected Persona() => EsNuevo = true;
 
         public void CalcularEdad()
         {

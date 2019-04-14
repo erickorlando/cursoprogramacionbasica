@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Windows.Forms;
 
 namespace SistemaPrestamos
@@ -61,6 +62,27 @@ namespace SistemaPrestamos
         {
             btnNuevo.PerformClick();
             CargarControles(bslistaProveedor, MainForm.Instancia.ListaProveedores);
+        }
+
+        private void BtnGrabarTodo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var ctx = new Contexto())
+                {
+                    foreach (var proveedor in MainForm.Instancia.ListaProveedores)
+                    {
+                        ctx.Set<Proveedor>().Add(proveedor);
+                    }
+                    ctx.SaveChanges();
+                }
+
+                MessageBox.Show("Se terminó de grabar todo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Base de Datos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
     }
 }
